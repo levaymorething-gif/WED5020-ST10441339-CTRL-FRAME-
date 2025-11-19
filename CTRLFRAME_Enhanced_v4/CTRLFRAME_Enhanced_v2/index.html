@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTRL//FRAME</title>
+  <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+  <header id="navbar">
+    <nav class="nav-container">
+      <h1 class="logo">CTRL<span>//</span>FRAME</h1>
+      <img src="images/CTRLFRAME (1).png"alt= height="" width="170">
+      <audio src="images\water-on-rocks-calm-manitoulin-49557.mp3" controls></audio>
+      
+
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="branches.html">Our Work</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h2 class="glitch" data-text="CTRL//FRAME">CTRL//FRAME</h2>
+      <p class="tagline">Where youth creativity breaks the frame.</p>
+      <a href="about.html" class="cta-btn">Explore Our World</a>
+    </div>
+  </section>
+
+  <section id="branches" class="section">
+    <div class="branch">
+      <h3> Frame by Frame</h3>
+      <p>A space for young filmmakers, animators, and storytellers to bring motion to ideas.</p>
+    </div>
+    <div class="branch">
+      <h3> Canvas CTRL</h3>
+      <p>Where visual artists, designers, and illustrators remix the canvas with bold expression.</p>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <p>© 2025 CTRL//FRAME. All rights reserved.</p>
+  </footer>
+  <!--Link to external JavaScript File-->
+
+<!-- Generative Art Background Canvas -->
+<canvas id="gen-canvas" style="position:fixed;left:0;top:0;z-index:-2;width:100%;height:100%;pointer-events:none;"></canvas>
+
+<!-- Audio Visualizer Controls -->
+<div id="audio-visualizer-ui" style="position:fixed;left:20px;bottom:20px;z-index:1001;background:rgba(0,0,0,0.5);padding:8px;border-radius:8px;color:#fff;">
+  <label style="font-size:12px;margin-right:6px;">Audio:</label>
+  <input id="audio-file-input" type="file" accept="audio/*" style="display:inline-block;"/>
+
+  <button id="audio-mic-btn" style="margin-left:6px;">Mic</button>
+  <button id="audio-play-btn" style="margin-left:6px;">Play</button>
+</div>
+
+<!-- Audio Canvas -->
+<canvas id="audio-canvas" width="600" height="100" style="position:fixed;left:0;bottom:0;z-index:1000;width:100%;height:120px;pointer-events:none;"></canvas>
+
+<button class="theme-toggle">🌓</button>
+<script src="javascript/script.js"></script>
+</body>
+</html>

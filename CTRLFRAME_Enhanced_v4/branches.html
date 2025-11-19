@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work | CTRL//FRAME</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+  <header id="navbar">
+    <nav class="nav-container">
+      <h1 class="logo">CTRL<span>//</span>FRAME</h1>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="branches.html">Our Work</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="contact.html" class="cta-btn">Get in Touch</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="our-work" class="section">
+    <section class="work-section">
+      <h2 class="section-title"> Frame by Frame</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Documentary Lab</h3>
+          <p>Explore real stories through youth-led documentaries and interviews.</p>
+          <a href="documentary-lab.html" class="cta-btn">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Photo Stories</h3>
+          <p>Capture moments and emotions through visual photo essays.</p>
+          <a href="photo-stories.html" class="cta-btn">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Short Film Studio</h3>
+          <p>Script, shoot, and edit short films with cinematic flair.</p>
+          <a href="short-film-studio.html" class="cta-btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section">
+      <h2 class="section-title"> Canvas CTRL</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>AI Art Lab</h3>
+          <p>Use machine learning tools to generate and remix visual art.</p>
+          <a href="ai-art-lab.html" class="cta-btn">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Graffiti Code</h3>
+          <p>Blend street art with generative design and creative coding.</p>
+          <a href="graffiti-code.html" class="cta-btn">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>AR Canvas</h3>
+          <p>Create augmented reality experiences that leap off the screen.</p>
+          <a href="ar-canvas.html" class="cta-btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <p>© 2025 CTRL//FRAME. All rights reserved.</p>
+  </footer>
+
+<!-- Generative Art Background Canvas -->
+<canvas id="gen-canvas" style="position:fixed;left:0;top:0;z-index:-2;width:100%;height:100%;pointer-events:none;"></canvas>
+
+<!-- Audio Visualizer Controls -->
+<div id="audio-visualizer-ui" style="position:fixed;left:20px;bottom:20px;z-index:1001;background:rgba(0,0,0,0.5);padding:8px;border-radius:8px;color:#fff;">
+  <label style="font-size:12px;margin-right:6px;">Audio:</label>
+  <input id="audio-file-input" type="file" accept="audio/*" style="display:inline-block;"/>
+
+  <button id="audio-mic-btn" style="margin-left:6px;">Mic</button>
+  <button id="audio-play-btn" style="margin-left:6px;">Play</button>
+</div>
+
+<!-- Audio Canvas -->
+<canvas id="audio-canvas" width="600" height="100" style="position:fixed;left:0;bottom:0;z-index:1000;width:100%;height:120px;pointer-events:none;"></canvas>
+
+<button class="theme-toggle">🌓</button>
+<script src="javascript/script.js"></script>
+</body>
+</html>

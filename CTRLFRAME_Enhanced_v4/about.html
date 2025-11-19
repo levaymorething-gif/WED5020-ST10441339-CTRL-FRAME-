@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | CTRL//FRAME</title>
+  <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+  <header id="navbar">
+    <nav class="nav-container">
+      <h1 class="logo">CTRL<span>//</span>FRAME</h1>
+      <nav class="nav-container">
+        <h1 class="logo">CTRL<span>//</span>FRAME</h1>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+
+
+          <li><a href="branches.html">Our Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </nav>
+      
+    </nav>
+  </header>
+
+  <main id="about-page" class="section">
+    <section class="mission">
+      <h2 class="section-title">Our Mission</h2>
+      <p>To empower youth through creative expression, collaboration, and digital storytelling,CTRL//FRAME exists to empower creators, brands, and communities through bold digital design. We build interactive experiences that go beyond visuals connecting people through story, motion, and emotion. Our purpose is to challenge the ordinary and help others express themselves in ways that feel original, fearless, and unforgettable.</p>
+    </section>
+
+    <section class="vision">
+      <h2 class="section-title">Our Vision</h2>
+      <p>CTRL//FRAME envisions a world where young creators shape culture through bold, boundarybreaking art,We envision a creative world without limits. CTRL//FRAME is a space where design breaks the frame—where ideas move freely, and innovation leads the way. Our vision is to shape the future of digital storytelling by blending art, technology, and experimentation into every project we touch.</p>
+    </section>
+
+    <section class="values">
+      <h2 class="section-title">Our Values</h2>
+      <ul class="values-list">
+        <li>Creativity</li>
+        <li> Collaboration</li>
+        <li> Inclusivity</li>
+        <li> Innovation</li>
+      </ul>
+    </section>
+
+    <section class="background">
+      <h2 class="section-title">Our Story</h2>
+      <p>CTRL//FRAME began as a grassroots initiative to give young artists a platform to express themselves. What started as a small community project has grown into a vibrant organization with two creative branches,CTRL//FRAME was born from the idea that creativity isn’t confined it moves from frame to frame, canvas to code. What started as a passion for pushing pixels became a mission to redefine digital expression. We took control of the canvas, rewrote the rules, and built a studio where design is fluid, interactive, and alive. Every project is a new frame in our story—each one a chance to explore, disrupt, and create something that resonates.</p>
+    </section>
+
+    <section class="branches">
+      <div class="branch">
+        <h3> Frame by Frame</h3>
+        <p>Focused on motion arts film, animation, and video storytelling. Youth learn to script, shoot, and edit their visions into reality,At CTRL//FRAME, we believe creativity is a continuous motion—moving frame to frame like a living storyboard. Each design, each interaction, each moment is part of a larger narrative. We don’t just build static visuals; we craft dynamic experiences that evolve, respond, and connect. From concept to execution, every frame is intentional, layered with meaning, and designed to move people.</p>
+      </div>
+      <div class="branch">
+        <h3> Canvas CTRL</h3>
+        <p>Dedicated to visual arts illustration, design, and mixed media. A space to experiment, remix, and redefine the canvas,To control the canvas is to reclaim creative freedom. CTRL//FRAME flips the traditional design process by giving creators the tools to command their own visual language. We don’t follow templates—we rewrite them. Whether it’s code, motion, or layout, we treat the canvas as a playground for experimentation. “Canvas CTRL” is our philosophy: design without limits, expression without compromise.</p>
+      </div>
+    </section>
+
+    <section class="team">
+      <h2 class="section-title">Meet the Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="images/JORDAN_LEE_900.webp" alt= height="" width="150" />
+          <h4>Jordan Lee</h4>
+          <p>Founder & Creative Director</p>
+        </div>
+        <div class="team-member">
+          <img src="images/Samira-Khan-Mahi.webp" alt= height="" width="150" />
+          <h4>Samira Khan</h4>
+          <p>Program Lead – Canvas CTRL</p>
+        </div>
+        <div class="team-member">
+          <img src="images/IG9G4935-copy.jpg" alt= height="" width="150" />
+          <h4>Leo Martinez</h4>
+          <p>Program Lead – Frame by Frame</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <p>© 2025 CTRL//FRAME. All rights reserved.</p>
+  </footer>
+
+<!-- Generative Art Background Canvas -->
+<canvas id="gen-canvas" style="position:fixed;left:0;top:0;z-index:-2;width:100%;height:100%;pointer-events:none;"></canvas>
+
+<!-- Audio Visualizer Controls -->
+<div id="audio-visualizer-ui" style="position:fixed;left:20px;bottom:20px;z-index:1001;background:rgba(0,0,0,0.5);padding:8px;border-radius:8px;color:#fff;">
+  <label style="font-size:12px;margin-right:6px;">Audio:</label>
+  <input id="audio-file-input" type="file" accept="audio/*" style="display:inline-block;"/>
+
+  <button id="audio-mic-btn" style="margin-left:6px;">Mic</button>
+  <button id="audio-play-btn" style="margin-left:6px;">Play</button>
+</div>
+
+<!-- Audio Canvas -->
+<canvas id="audio-canvas" width="600" height="100" style="position:fixed;left:0;bottom:0;z-index:1000;width:100%;height:120px;pointer-events:none;"></canvas>
+
+<button class="theme-toggle">🌓</button>
+<script src="javascript/script.js"></script>
+</body>
+</html>

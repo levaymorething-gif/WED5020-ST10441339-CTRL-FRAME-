@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | CTRL//FRAME</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+  <header id="navbar">
+    <nav class="nav-container">
+      <h1 class="logo">CTRL<span>//</span>FRAME</h1>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="branches.html">Our Work</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contact-page" class="section">
+    <h2 class="section-title">Let’s Connect</h2>
+    <p class="contact-message">Whether you're ready to collaborate or just curious, drop us a line—we'd love to hear from you!</p>
+
+    <div class="contact-container">
+      <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="cta-btn">Send Message</button>
+      </form>
+
+      <div class="social-links">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon">Instagram</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon">Twitter</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon">YouTube</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <p>© 2025 CTRL//FRAME. All rights reserved.</p>
+  </footer>
+
+<!-- Generative Art Background Canvas -->
+<canvas id="gen-canvas" style="position:fixed;left:0;top:0;z-index:-2;width:100%;height:100%;pointer-events:none;"></canvas>
+
+<!-- Audio Visualizer Controls -->
+<div id="audio-visualizer-ui" style="position:fixed;left:20px;bottom:20px;z-index:1001;background:rgba(0,0,0,0.5);padding:8px;border-radius:8px;color:#fff;">
+  <label style="font-size:12px;margin-right:6px;">Audio:</label>
+  <input id="audio-file-input" type="file" accept="audio/*" style="display:inline-block;"/>
+
+  <button id="audio-mic-btn" style="margin-left:6px;">Mic</button>
+  <button id="audio-play-btn" style="margin-left:6px;">Play</button>
+</div>
+
+<!-- Audio Canvas -->
+<canvas id="audio-canvas" width="600" height="100" style="position:fixed;left:0;bottom:0;z-index:1000;width:100%;height:120px;pointer-events:none;"></canvas>
+
+<button class="theme-toggle">🌓</button>
+<script src="javascript/script.js"></script>
+</body>
+</html>

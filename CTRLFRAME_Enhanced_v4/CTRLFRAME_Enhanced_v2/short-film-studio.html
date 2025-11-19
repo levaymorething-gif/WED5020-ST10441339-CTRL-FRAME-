@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Short Film Studio | CTRL//FRAME</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .film-form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    #film-preview {
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header id="navbar">
+    <nav class="nav-container">
+      <h1 class="logo">CTRL<span>//</span>FRAME</h1>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="branches.html">Our Work</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="contact.html" class="cta-btn">Get in Touch</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h2 class="section-title">🎥 Short Film Studio</h2>
+    <p class="section-description">Build your own short film concept. Fill in the details and preview your story idea instantly.</p>
+
+    <div class="content-block">
+      <h3>🎬 Instructions</h3>
+      <ul>
+        <li>Enter a film title</li>
+        <li>Write a short logline (summary)</li>
+        <li>Select a genre</li>
+        <li>Click “Generate Film” to preview your concept</li>
+      </ul>
+    </div>
+
+    <form class="film-form">
+      <label for="title">Film Title</label>
+      <input type="text" id="title" required />
+
+      <label for="logline">Logline</label>
+      <textarea id="logline" rows="3" required></textarea>
+
+      <label for="genre">Genre</label>
+      <select id="genre" required>
+        <option value="">Select a genre</option>
+        <option>Drama</option>
+        <option>Comedy</option>
+        <option>Thriller</option>
+        <option>Documentary</option>
+        <option>Sci-Fi</option>
+      </select>
+
+      <button type="submit" class="cta-btn">Generate Film</button>
+    </form>
+
+    <div id="film-preview"></div>
+
+    <a href="branches.html" class="cta-btn">← Back to Our Work</a>
+  </main>
+
+  <footer id="footer">
+    <p>© 2025 CTRL//FRAME. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.querySelector('.film-form');
+    const preview = document.getElementById('film-preview');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const title = document.getElementById('title').value;
+      const logline = document.getElementById('logline').value;
+      const genre = document.getElementById('genre').value;
+
+      preview.innerHTML = `
+        <h3>Your Film Concept</h3>
+        <p><strong>Title:</strong> ${title}</p>
+        <p><strong>Genre:</strong> ${genre}</p>
+        <p><strong>Logline:</strong> ${logline}</p>
+      `;
+    });
+  </script>
+
+<!-- Generative Art Background Canvas -->
+<canvas id="gen-canvas" style="position:fixed;left:0;top:0;z-index:-2;width:100%;height:100%;pointer-events:none;"></canvas>
+
+<!-- Audio Visualizer Controls -->
+<div id="audio-visualizer-ui" style="position:fixed;left:20px;bottom:20px;z-index:1001;background:rgba(0,0,0,0.5);padding:8px;border-radius:8px;color:#fff;">
+  <label style="font-size:12px;margin-right:6px;">Audio:</label>
+  <input id="audio-file-input" type="file" accept="audio/*" style="display:inline-block;"/>
+
+  <button id="audio-mic-btn" style="margin-left:6px;">Mic</button>
+  <button id="audio-play-btn" style="margin-left:6px;">Play</button>
+</div>
+
+<!-- Audio Canvas -->
+<canvas id="audio-canvas" width="600" height="100" style="position:fixed;left:0;bottom:0;z-index:1000;width:100%;height:120px;pointer-events:none;"></canvas>
+
+<button class="theme-toggle">🌓</button>
+<script src="javascript/script.js"></script>
+</body>
+</html>

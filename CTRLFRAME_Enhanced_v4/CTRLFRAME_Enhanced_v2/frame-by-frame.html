@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frame by Frame | CTRL//FRAME</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header id="navbar">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="branches.html">Branches</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main class="section">
+    <h2>Frame by Frame</h2>
+    <p>Our documentary lab empowers young creators to tell real stories through film. Participants learn interviewing, cinematography, and editing techniques to produce powerful short documentaries.</p>
+    <section>
+      <h3>What You'll Learn</h3>
+      <ul>
+        <li>Storyboarding and scripting</li>
+        <li>Camera operation and lighting</li>
+        <li>Interviewing and field recording</li>
+        <li>Editing with professional software</li>
+      </ul>
+    </section>
+  </main>
+
+<!-- Generative Art Background Canvas -->
+<canvas id="gen-canvas" style="position:fixed;left:0;top:0;z-index:-2;width:100%;height:100%;pointer-events:none;"></canvas>
+
+<!-- Audio Visualizer Controls -->
+<div id="audio-visualizer-ui" style="position:fixed;left:20px;bottom:20px;z-index:1001;background:rgba(0,0,0,0.5);padding:8px;border-radius:8px;color:#fff;">
+  <label style="font-size:12px;margin-right:6px;">Audio:</label>
+  <input id="audio-file-input" type="file" accept="audio/*" style="display:inline-block;"/>
+
+  <button id="audio-mic-btn" style="margin-left:6px;">Mic</button>
+  <button id="audio-play-btn" style="margin-left:6px;">Play</button>
+</div>
+
+<!-- Audio Canvas -->
+<canvas id="audio-canvas" width="600" height="100" style="position:fixed;left:0;bottom:0;z-index:1000;width:100%;height:120px;pointer-events:none;"></canvas>
+
+<button class="theme-toggle">🌓</button>
+<script src="javascript/script.js"></script>
+</body>
+</html>

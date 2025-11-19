@@ -1,0 +1,225 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffeaea;
+  color: #0d0d0d;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION */
+header {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo {
+  color: #0d0d0d;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00aeef;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0d0d0d;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00aeef;
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #0d0d0d;
+}
+
+.hero p {
+  color: #00aeef;
+  margin-top: 10px;
+}
+
+/* CONTACT */
+.contact-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 80%;
+  max-width: 400px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #00aeef;
+  border-radius: 8px;
+}
+
+.contact-section button {
+  background: #00aeef;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background: #008ecc;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #0d0d0d;
+}
+
+/* BACKGROUND ANIMATION */
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sea {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, #00aeef 40%, #ffeaea 100%);
+  animation: wave 6s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.sun {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 100px;
+  height: 100px;
+  background: #00aeef;
+  border-radius: 50%;
+  animation: float 4s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+.boat {
+  position: absolute;
+  bottom: 35%;
+  left: 50%;
+  width: 120px;
+  height: 60px;
+  background: #fff;
+  border: 3px solid #0d0d0d;
+  border-radius: 0 0 10px 10px;
+  transform: translateX(-50%);
+  animation: sail 5s infinite ease-in-out;
+}
+
+@keyframes sail {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 8px);
+  }
+}
+
+.clouds::before,
+.clouds::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 100px;
+  height: 40px;
+  border-radius: 50%;
+  top: 10%;
+  left: 30%;
+  animation: cloudsMove 30s linear infinite;
+}
+
+.clouds::after {
+  left: 70%;
+  width: 120px;
+  height: 50px;
+  top: 20%;
+}
+
+@keyframes cloudsMove {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+.clouds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
